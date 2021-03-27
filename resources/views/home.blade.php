@@ -99,11 +99,9 @@
                             </li>
                         @endif
                     @else
-                        <li class="list-group-item">
-                            <div class="d-flex justify-content-between">
+                        <li class="list-group-item d-flex justify-content-between">
                                 <p>မှတ်တမ်းမဖြည့်ရသေးပါ၊ မှတ်တမ်းဖြည့်ရန်...</p>
                                 <a class="btn btn-primary btn-sm" href="{{ route('rec.create') }}">မှတ်တမ်းရေးမည်</a>
-                            </div>
                         </li>
                     @endif
 
@@ -115,7 +113,11 @@
                     <hr class="my-4">
                     <p class="lead">{{ $comment->doctorComment }}</p>
                   @else
-                    <p class="lead text-center"> ညနေ 6:00 နာရီတွင် မှတ်ချက်ရေးပါမည်။</p>   
+                  <div class="text-center">
+                    <p class="lead text-center"> ညနေ 7:00 နာရီတွင် အကြံပြုချက်ဤနေရာတွင် ဖတ်ပေးပါ။</p>
+                        <span class="bg-warning ">နေ့စဉ်မှတ်တမ်းပို့ထားလျှင် အကြံပြုချက်ရပါမည်။</span>
+                    </div> 
+                      
                   @endif
                   
                 </div>
@@ -178,16 +180,18 @@
                   </ul>
                 @else
                   <ul class="list-group mb-3">
-                    <li class="list-group-item active">သောက်ဆေးမှတ်တမ်းမရှိပါ</li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center active">သောက်ဆေးမှတ်တမ်းမရှိပါ</li>
+                    <a class="btn btn-secondary btn-sm" href="{{ route('med.create') }}">မှတ်တမ်းဖြည့်ရန်</a>
                   </ul> 
                 @endif
                 
 
 
                  @if (is_null($nextTest))
-                    <div class="alert alert-warning">
-                        <strong>သွေးစစ်ဆေးမှုမှတ်တမ်းမရှိသေးပါ</strong>
-                    </div>
+                 <ul class="list-group mb-3">
+                    <li class="list-group-item d-flex justify-content-between align-items-center active">သွေးစစ်ဆေးမှုမှတ်တမ်းမရှိပါ</li>
+                    <a class="btn btn-secondary btn-sm" href="{{ route('inv.create') }}">မှတ်တမ်းဖြည့်ရန်</a>
+                  </ul> 
                  @else
                     <ul class="list-group">
                         <li class="list-group-item d-flex justify-content-between align-items-center">

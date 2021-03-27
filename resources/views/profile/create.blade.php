@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Diabetes Blog</title>
+    <title>Aung Lifestyle</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -34,7 +34,7 @@
                             <label for="dmNumber" class="col-md-4 col-form-label text-md-right">{{ __('သင်တန်းသားနံပါတ်') }}</label>
 
                             <div class="col-md-6">
-                                <input id="dmNumber" type="text" class="form-control @error('dmNumber') is-invalid @enderror" name="dmNumber" value="{{ old('dmNumber') }}" required autocomplete="dmNumber" autofocus>
+                                <input id="dmNumber" type="text" class="form-control @error('dmNumber') is-invalid @enderror" name="dmNumber" value="{{ old('dmNumber') }}" required autocomplete="dmNumber" autofocus placeholder="ဉပမာ DM001၊ မိမိသင်တန်းသားနံပါတ် ဖြည့်ပါ">
 
                                 @error('dmNumber')
                                     <span class="invalid-feedback" role="alert">
@@ -45,10 +45,10 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="dob" class="col-md-4 col-form-label text-md-right">{{ __('မွေးသက္ကရာ') }}</label>
+                            <label for="dob" class="col-md-4 col-form-label text-md-right">{{ __('မွေးသက္ကရာဇ်') }}</label>
 
                             <div class="col-md-6">
-                                <input id="dob" type="text" class="form-control @error('dob') is-invalid @enderror" name="dob" value="{{ old('dob') }}" required autocomplete="dob" autofocus>
+                                <input id="dob" type="text" class="form-control @error('dob') is-invalid @enderror" name="dob" value="{{ old('dob') }}" required autocomplete="dob" autofocus placeholder="16-10-1991 ရက်-လ-နှစ် အင်္ဂလိပ်လိုဖြည့်ပါ။">
 
                                 @error('dob')
                                     <span class="invalid-feedback" role="alert">
@@ -62,7 +62,7 @@
                             <label for="address" class="col-md-4 col-form-label text-md-right">{{ __('နေရပ်လိပ်စာ') }}</label>
 
                             <div class="col-md-6">
-                                <input id="address" type="text" class="form-control @error('address') is-invalid @enderror" name="address" value="{{ old('address') }}" required autocomplete="address" autofocus>
+                                <input id="address" type="text" class="form-control @error('address') is-invalid @enderror" name="address" value="{{ old('address') }}" required autocomplete="address" autofocus placeholder="နေရပ်လိပ်စာ အပြည့်စုံရေးပါ">
 
                                 @error('address')
                                     <span class="invalid-feedback" role="alert">
@@ -76,7 +76,7 @@
                             <label for="diabetesAge" class="col-md-4 col-form-label text-md-right">{{ __('ဆီးချိုသက်တမ်း') }}</label>
 
                             <div class="col-md-6">
-                                <input id="diabetesAge" type="text" class="form-control @error('diabetesAge') is-invalid @enderror" name="diabetesAge" value="{{ old('diabetesAge') }}" required autocomplete="diabetesAge" autofocus>
+                                <input id="diabetesAge" type="text" class="form-control @error('diabetesAge') is-invalid @enderror" name="diabetesAge" value="{{ old('diabetesAge') }}" required autocomplete="diabetesAge" autofocus placeholder="၁နှစ် (သို့မဟုတ်) ၁လ စသဖြင့်">
 
                                 @error('diabetesAge')
                                     <span class="invalid-feedback" role="alert">
@@ -90,7 +90,14 @@
                             <label for="favFood" class="col-md-4 col-form-label text-md-right">{{ __('နှစ်သက်သည့် အစာအုပ်စု') }}</label>
 
                             <div class="col-md-6">
-                                <input id="favFood" type="text" class="form-control @error('favFood') is-invalid @enderror" name="favFood" value="{{ old('favFood') }}" required autocomplete="favFood" autofocus>
+                                <select name="favFood"  class="custom-select form-control @error('favFood') is-invalid @enderror" id="inputGroupSelect01" value="{{ old('favFood') }}">
+                                    <option selected>မိမိအနှစ်သက်ဆုံးကို စိတ်ကြိုက်ရွေးပါ...</option>
+                                    <option value="နို့ထွက်ပစ္စည်းများ ကြိုက်ပါသည်။">နို့ထွက်ပစ္စည်းများ ကြိုက်ပါသည်။</option>
+                                    <option value="ဟင်းသီးဟင်ရွက် ကြိုက်ပါသည်။">ဟင်းသီးဟင်ရွက် ကြိုက်ပါသည်။</option>
+                                    <option value="အသားငါး ကြိုက်ပါသည်။">အသားငါး ကြိုက်ပါသည်။</option>
+                                    <option value="အချိုများသည့် အစာများကြိုက်ပါသည်။">အချိုများသည့် အစာများကြိုက်ပါသည်။</option>
+                                    <option value="အဆီများသည့် အစာများကြိုက်ပါသည်။">အဆီများသည့် အစာများကြိုက်ပါသည်။</option>
+                                </select>
 
                                 @error('favFood')
                                     <span class="invalid-feedback" role="alert">
@@ -105,6 +112,7 @@
 
                             <div class="col-md-6">
                                 <input id="profile_pic" type="file" class="form-control @error('profile_pic') is-invalid @enderror" name="profile_pic" value="{{ old('profile_pic') }}" autocomplete="profile_pic" autofocus>
+                                <span class="badge badge-warning">ဓါတ်ပုံပို့ရန် မလိုသေးပါ၊</span>
 
                                 @error('profile_pic')
                                     <span class="invalid-feedback" role="alert">
