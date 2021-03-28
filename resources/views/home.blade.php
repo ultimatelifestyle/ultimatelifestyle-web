@@ -99,10 +99,10 @@
                             </li>
                         @endif
                     @else
+                        
                         <li class="list-group-item d-flex justify-content-between">
-                                <p>မှတ်တမ်းမဖြည့်ရသေးပါ၊ မှတ်တမ်းဖြည့်ရန်...</p>
+                                မှတ်တမ်းမဖြည့်ရသေးပါ၊ မှတ်တမ်းဖြည့်ရန်...</li>
                                 <a class="btn btn-primary btn-sm" href="{{ route('rec.create') }}">မှတ်တမ်းရေးမည်</a>
-                        </li>
                     @endif
 
                 </ul>
