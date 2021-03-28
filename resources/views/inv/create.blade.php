@@ -16,7 +16,7 @@
                             <label for="testDate" class="col-md-4 col-form-label text-md-right">{{ __('သွေးစစ်ဆေးသည့် ရက်စွဲ') }}</label>
 
                             <div class="col-md-6">
-                                <input id="testDate" type="text" class="form-control @error('testDate') is-invalid @enderror" name="testDate" value="{{ old('testDate') }}" autocomplete="testDate" autofocus>
+                                <input id="testDate" type="text" class="form-control @error('testDate') is-invalid @enderror" name="testDate" value="{{ old('testDate') }}" autocomplete="testDate" autofocus placeholder="21-3-2021">
 
                                 @error('testDate')
                                     <span class="invalid-feedback" role="alert">
