@@ -83,10 +83,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </router-link>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <router-link to="/dailyrecord" class="nav-link">
                   <i class="fas fa-book nav-icon"></i>
                   <p>Daily Record</p>
-                </a>
+                </router-link>
+              </li>
+              <li class="nav-item">
+                <router-link to="/investigation" class="nav-link">
+                  <i class="fas fa-vials nav-icon text-red"></i>
+                  <p>Investigation</p>
+                </router-link>
               </li>
             </ul>
           </li>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Medication;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class MedicationController extends Controller
 {
@@ -24,7 +25,7 @@ class MedicationController extends Controller
      */
     public function index()
     {
-        $meds = Medication::latest()->paginate(1);
+        $meds = auth()->user()->medications()->latest()->paginate(1);
         return view('med.index', compact('meds'));
     }
 

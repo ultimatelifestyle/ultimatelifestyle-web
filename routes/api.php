@@ -19,5 +19,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::apiResource('admin', 'API\ManagementController');
+Route::get('dailyrecord', 'API\ManagementController@dailyrecord');
+Route::get('profile', 'API\ManagementController@profile');
+Route::get('inv', 'API\ManagementController@inv');
 Route::apiResource('doctor', 'API\DoctorCommentController');
 

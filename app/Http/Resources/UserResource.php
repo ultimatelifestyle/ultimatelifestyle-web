@@ -15,17 +15,15 @@ class UserResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'userid' => $this->id,
-            'dmNumber' => $this->profile->dmNumber,
-            'name' => $this->name,
-            'recDate' => $this->records()->latest()->first('recDate'),
-            'fbs' => $this->records()->latest()->first('fbs'),
-            'breakfast' => $this->records()->latest()->first('breakfast'),
-            'nuts' => $this->records()->latest()->first('nuts'),
-            'lunch' => $this->records()->latest()->first('lunch'),
-            'rbs' => $this->records()->latest()->first('rbs'),
-            'fruits' => $this->records()->latest()->first('fruits'),
-            'dinner' => $this->records()->latest()->first('dinner'),            
+            'userid' => $this->user->id,
+            'name' => $this->user->name,
+            'phoneNumber' => $this->user->phoneNumber,
+            'dmNumber' => $this->dmNumber,
+            'dob' => $this->dob,
+            'address' => $this->address,
+            'diabetesAge' => $this->diabetesAge,
+            'favFood' => $this->favFood,
+            'profile_pif' => $this->profile_pif,
         ];
     }
 }

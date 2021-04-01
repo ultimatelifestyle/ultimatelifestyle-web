@@ -22,25 +22,29 @@
                     <tr>
                       <th>ID</th>
                       <th>Name</th>
-                      <th>D.O.B</th>
-                      <th>Diabetes Age</th>
-                      <th>Phone Number</th>
-                      <th>Address</th>
-                      <th>Avatar</th>
-                      <th>Status</th>
-                      <th>Modify</th>
+                      <th>Date</th>
+                      <th>FBS</th>
+                      <th>Breakfast</th>
+                      <th>Nuts</th>
+                      <th>Lunch</th>
+                      <th>RBS</th>
+                      <th>Fruits</th>
+                      <th>Dinner</th>
+                      <th>Comment</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr v-for="user in users.data" :key="user.userid">
                       <td>{{ user.dmNumber }}</td>
                       <td>{{ user.name }}</td>
-                      <td>{{ user.dob }}</td>
-                      <td>{{ user.diabetesAge }}</td>
-                      <td>{{ user.phoneNumber }}</td>
-                      <td>{{ user.address }}</td>
-                      <td>{{ user.profile_pic }}</td>
-                      <td>Member or Not</td>
+                      <td>{{ user.recDate }}</td>
+                      <td>{{ user.fbs }}</td>
+                      <td>{{ user.Breakfast }}</td>
+                      <td>{{ user.nuts }}</td>
+                      <td>{{ user.lunch }}</td>
+                      <td>{{ user.rbs }}</td>
+                      <td>{{ user.fruits }}</td>
+                      <td>{{ user.dinner }}</td>
                       <td>
                         <a href="#" @click="doctorComment(user)" data-toggle="modal" data-target="#addNew">
                           <i class="fas fa-comment-medical"></i>
@@ -111,7 +115,7 @@
         },
         methods: {
           getResults(page = 1) {
-            axios.get('api/profile?page=' + page)
+            axios.get('api/dailyrecord?page=' + page)
               .then(response => {
                 this.users = response.data
               });
@@ -130,7 +134,7 @@
               this.form.fill(user)
           },
           loadUsers(){
-              axios.get('api/profile')
+              axios.get('api/dailyrecord')
               .then((res) => {
                 this.users = res.data
               })

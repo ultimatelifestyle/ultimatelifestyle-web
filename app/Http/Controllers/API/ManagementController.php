@@ -2,8 +2,13 @@
 
 namespace App\Http\Controllers\API;
 
+use App\DailyRecord;
 use App\Http\Controllers\Controller;
+use App\Http\Resources\DailyRecordResource;
+use App\Http\Resources\InvResource;
 use App\Http\Resources\UserResource;
+use App\Investigation;
+use App\Profile;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -24,14 +29,21 @@ class ManagementController extends Controller
     {
         return view('admin.admin');
     }
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+
+
+    public function dailyrecord()
     {
-        return UserResource::collection(User::latest()->paginate(1));
+        return DailyRecordResource::collection(DailyRecord::latest()->paginate(1));
+    }
+
+    public function profile()
+    {
+        return UserResource::collection(Profile::latest()->paginate(1));
+    }
+
+    public function inv()
+    {
+        return InvResource::collection(Investigation::latest()->paginate(1));
     }
 
     /**

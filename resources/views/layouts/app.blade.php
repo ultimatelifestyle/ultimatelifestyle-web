@@ -35,16 +35,16 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/home')}}">Dashboard</a>
+                            <a class="nav-link text-white" href="{{ url('/home')}}">Dashboard</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="{{ url('/rec')}}">Daily Record</a>
+                          <a class="nav-link text-white" href="{{ url('/rec')}}">Daily Record</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="{{ url('/inv')}}">Blood Tests</a>
+                          <a class="nav-link text-white" href="{{ url('/inv')}}">Blood Tests</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/med')}}">Medication</a>
+                            <a class="nav-link text-white" href="{{ url('/med')}}">Medication</a>
                           </li>
                       </ul>
 
@@ -53,10 +53,10 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="https://m.facebook.com/LifestyleMedicineMyanmar/" target="_blank"><i class="fa fa-facebook-square fa-2x mr-2"></i></a>
+                                <a class="nav-link text-white" href="https://m.facebook.com/LifestyleMedicineMyanmar/" target="_blank">Facebook</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="https://www.youtube.com/channel/UC1cBNWX0-6q654q97LilHBQ" target="_blank"><i class="fa fa-youtube-square fa-2x mr-3"></i></a>
+                                <a class="nav-link text-red" href="https://www.youtube.com/channel/UC1cBNWX0-6q654q97LilHBQ" target="_blank">Youtube</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -68,13 +68,13 @@
                             @endif
                         @else
                             <li class="nav-item">
-                                <a class="nav-link" href="https://m.facebook.com/LifestyleMedicineMyanmar/" target="_blank"><i class="fa fa-facebook-square fa-2x mr-2"></i></a>
+                                <a class="nav-link text-white" href="https://m.facebook.com/LifestyleMedicineMyanmar/" target="_blank">Facebook</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="https://www.youtube.com/channel/UC1cBNWX0-6q654q97LilHBQ" target="_blank"><i class="fa fa-youtube fa-2x mr-3"></i></a>
+                                <a class="nav-link" href="https://www.youtube.com/channel/UC1cBNWX0-6q654q97LilHBQ" target="_blank">Youtube</a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="nav-link text-white dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     <img src="{{asset('default.png')}}" height="30" class="rounded-circle" alt="Profile Picture"> {{ Auth::user()->name }}
                                 </a>
 

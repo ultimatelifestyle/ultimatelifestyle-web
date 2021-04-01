@@ -22,11 +22,17 @@
                     <tr>
                       <th>ID</th>
                       <th>Name</th>
-                      <th>D.O.B</th>
-                      <th>Diabetes Age</th>
-                      <th>Phone Number</th>
-                      <th>Address</th>
-                      <th>Avatar</th>
+                      <th>Test Date</th>
+                      <th>C-Peptide</th>
+                      <th>HbA1c</th>
+                      <th>Cholesterol</th>
+                      <th>HDL</th>
+                      <th>LDL</th>
+                      <th>Triglycerides</th>
+                      <th>Chol/HDL Ratio</th>
+                      <th>Creatinine</th>
+                      <th>TSH</th>
+                      <th>Next Test</th>
                       <th>Status</th>
                       <th>Modify</th>
                     </tr>
@@ -35,12 +41,18 @@
                     <tr v-for="user in users.data" :key="user.userid">
                       <td>{{ user.dmNumber }}</td>
                       <td>{{ user.name }}</td>
-                      <td>{{ user.dob }}</td>
-                      <td>{{ user.diabetesAge }}</td>
-                      <td>{{ user.phoneNumber }}</td>
-                      <td>{{ user.address }}</td>
-                      <td>{{ user.profile_pic }}</td>
-                      <td>Member or Not</td>
+                      <td>{{ user.testDate }}</td>
+                      <td>{{ user.Cpeptide }}</td>
+                      <td>{{ user.hba1c }}</td>
+                      <td>{{ user.cholesterol }}</td>
+                      <td>{{ user.hdl }}</td>
+                      <td>{{ user.ldl }}</td>
+                      <td>{{ user.tg }}</td>
+                      <td>{{ user.ratio }}</td>
+                      <td>{{ user.cr }}</td>
+                      <td>{{ user.tsh }}</td>
+                      <td>{{ user.nextTest }}</td>
+                      <td>Inform or Not</td>
                       <td>
                         <a href="#" @click="doctorComment(user)" data-toggle="modal" data-target="#addNew">
                           <i class="fas fa-comment-medical"></i>
@@ -111,7 +123,7 @@
         },
         methods: {
           getResults(page = 1) {
-            axios.get('api/profile?page=' + page)
+            axios.get('api/inv?page=' + page)
               .then(response => {
                 this.users = response.data
               });
@@ -130,7 +142,7 @@
               this.form.fill(user)
           },
           loadUsers(){
-              axios.get('api/profile')
+              axios.get('api/inv')
               .then((res) => {
                 this.users = res.data
               })

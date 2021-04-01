@@ -31227,6 +31227,18 @@ i.fa-youtube-square {
   color: #ff0707;
 }
 
+.text-white {
+  color: white;
+}
+
+.text-red {
+  color: red !important;
+}
+
+.text-blue {
+  color: blue !important;
+}
+
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
