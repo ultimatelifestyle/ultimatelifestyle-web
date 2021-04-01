@@ -78,12 +78,7 @@
                                     <img src="{{asset('default.png')}}" height="30" class="rounded-circle" alt="Profile Picture"> {{ Auth::user()->name }}
                                 </a>
 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    @can('doctor', auth()->user())
-                                   
-                                    <a class="dropdown-item" href="{{ route('doctor.create') }}">Doctor Comment</a>
-                                        
-                                    @endcan                                    
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">                                 
                                     <a class="dropdown-item" href="{{ route('profile.index') }}">{{ auth()->user()-> name}} ၏ နေရာ</a>
 
                                     <a class="dropdown-item" href="{{ route('promise.create') }}">ကတိပြုစာ</a>

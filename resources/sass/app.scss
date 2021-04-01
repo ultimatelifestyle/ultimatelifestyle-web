@@ -9,3 +9,12 @@
 
 //Fontawesome
 @import "node_modules/font-awesome/scss/font-awesome.scss";
+
+$fa-font-path:"../webfonts";
+@import "@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "@fortawesome/fontawesome-free/scss/solid.scss";
+@import "@fortawesome/fontawesome-free/scss/brands.scss";
+
+//Admin LTE
+@import "~admin-lte/dist/css/adminlte.css";
+

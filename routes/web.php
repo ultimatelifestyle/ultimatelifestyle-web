@@ -21,12 +21,16 @@ Route::resource('/rec', 'DailyRecordController');
 Route::resource('/inv', 'InvestigationController');
 Route::resource('/med', 'MedicationController');
 Route::resource('/profile', 'ProfileController');
-Route::resource('/doctor', 'DoctorCommentController');
 Route::get('/promise', 'UserPromiseController@createPromise')->name('promise.create');
 Route::post('/promise', 'UserPromiseController@storePromise')->name('promise.store');
 Route::get('/feedback', 'UserFeedBackController@createFeedback')->name('feedback.create');
 Route::post('/feedback', 'UserFeedBackController@storeFeedback')->name('feedback.store');
 
+Route::get('/admin', 'API\ManagementController@admin');
 
 Auth::routes();
+
+Route::get('{any}', function () {
+    return view('admin.admin');
+})->where('any','.*');
 
