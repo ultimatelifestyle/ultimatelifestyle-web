@@ -33,17 +33,17 @@ class ManagementController extends Controller
 
     public function dailyrecord()
     {
-        return DailyRecordResource::collection(DailyRecord::latest()->paginate(1));
+        return DailyRecordResource::collection(DailyRecord::latest()->paginate(7));
     }
 
     public function profile()
     {
-        return UserResource::collection(Profile::latest()->paginate(1));
+        return UserResource::collection(Profile::latest()->paginate(7));
     }
 
     public function inv()
     {
-        return InvResource::collection(Investigation::latest()->paginate(1));
+        return InvResource::collection(Investigation::latest()->paginate(7));
     }
 
     /**
