@@ -16,7 +16,7 @@ class DailyRecordResource extends JsonResource
     {
         return [
             'userid' => $this->user->id,
-            'dmNumber' => $this->user->profile->dmNumber,
+            // 'dmNumber' => $this->user->profile->dmNumber,
             'name' => $this->user->name,
             'recDate' => $this->recDate,
             'fbs' => $this->fbs,

@@ -42873,8 +42873,6 @@ var render = function() {
               "tbody",
               _vm._l(_vm.users.data, function(user) {
                 return _c("tr", { key: user.userid }, [
-                  _c("td", [_vm._v(_vm._s(user.dmNumber))]),
-                  _vm._v(" "),
                   _c("td", [_vm._v(_vm._s(user.name))]),
                   _vm._v(" "),
                   _c("td", [_vm._v(_vm._s(user.recDate))]),
@@ -43116,8 +43114,6 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("thead", [
       _c("tr", [
-        _c("th", [_vm._v("ID")]),
-        _vm._v(" "),
         _c("th", [_vm._v("Name")]),
         _vm._v(" "),
         _c("th", [_vm._v("Date")]),
@@ -43219,8 +43215,6 @@ var render = function() {
               "tbody",
               _vm._l(_vm.users.data, function(user) {
                 return _c("tr", { key: user.userid }, [
-                  _c("td", [_vm._v(_vm._s(user.dmNumber))]),
-                  _vm._v(" "),
                   _c("td", [_vm._v(_vm._s(user.name))]),
                   _vm._v(" "),
                   _c("td", [_vm._v(_vm._s(user.testDate))]),
@@ -43470,8 +43464,6 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("thead", [
       _c("tr", [
-        _c("th", [_vm._v("ID")]),
-        _vm._v(" "),
         _c("th", [_vm._v("Name")]),
         _vm._v(" "),
         _c("th", [_vm._v("Test Date")]),

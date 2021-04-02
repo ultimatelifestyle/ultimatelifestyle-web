@@ -16,7 +16,7 @@ class InvResource extends JsonResource
     {
         return [
             'userid' => $this->user->id,
-            'dmNumber' => $this->user->profile->dmNumber,
+            // 'dmNumber' => $this->user->profile->dmNumber,
             'name' => $this->user->name,
             'testDate' => $this->testDate,
             'Cpeptide' => $this->Cpeptide,

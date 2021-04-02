@@ -20,7 +20,7 @@
                 <table class="table table-hover">
                   <thead>
                     <tr>
-                      <th>ID</th>
+                      <!-- <th>ID</th> -->
                       <th>Name</th>
                       <th>Test Date</th>
                       <th>C-Peptide</th>
@@ -39,7 +39,7 @@
                   </thead>
                   <tbody>
                     <tr v-for="user in users.data" :key="user.userid">
-                      <td>{{ user.dmNumber }}</td>
+                      <!-- <td>{{ user.dmNumber }}</td> -->
                       <td>{{ user.name }}</td>
                       <td>{{ user.testDate }}</td>
                       <td>{{ user.Cpeptide }}</td>
